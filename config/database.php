@@ -1,0 +1,21 @@
+<?php
+// deklarasi parameter koneksi database
+$server   = "localhost";
+$username = "root";
+$password = "";
+$database = "ppdb_dapit_1";
+
+// koneksi database
+$koneksi = mysqli_connect($server, $username, $password, $database);
+// cek koneksi
+if (!$koneksi) {
+    die('Koneksi Database Gagal : ');
+}
+(isset($_GET['pg'])) ? $pg = $_GET['pg'] : $pg = '';
+(isset($_GET['ac'])) ? $ac = $_GET['ac'] : $ac = '';
+
+// SETTING WAKTU
+date_default_timezone_set("Asia/Jakarta");
+if (!defined('BASEPATH')) {
+    define('BASEPATH', dirname(__FILE__));
+}

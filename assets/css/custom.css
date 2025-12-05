@@ -1,0 +1,927 @@
+/* Enhanced Theme Styles - Dark Blue & Orange */
+:root {
+    --brand-dark-blue: #003366;
+    --brand-orange: #FF6600;
+    --brand-orange-light: #ff944d;
+    --brand-blue-light: #004d99;
+    --info-bg: #F4F7F9;
+    --stat-title: #333333;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+    /* Additional tokens used across the file (previously declared inside a selector) */
+    --primary-color: #1a237e; /* Biru tua */
+    --secondary-color: #ff9800; /* Orange */
+    --card-blue: #1a237e;
+    --card-orange: #ff9800;
+}
+
+/* Button Classes */
+.btn-orange,
+.btn-primary,
+.btn-success,
+.card-header.bg-success {
+    background-color: var(--brand-orange) !important;
+    border-color: var(--brand-orange) !important;
+    color: #fff !important;
+}
+
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--brand-orange-light) !important;
+    border-color: var(--brand-orange-light) !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Login Page Specific Styles */
+.card-secondary .card-header,
+.card-header.bg-success,
+.card-header.bg-primary,
+.section-header,
+.main-header {
+    background-color: var(--brand-dark-blue) !important;
+    border-color: var(--brand-dark-blue) !important;
+    color: #fff !important;
+}
+
+.card-secondary .card-body.bg-info,
+.card-body.bg-info {
+    background-color: #fff !important;
+}
+
+.card-secondary {
+    border: none !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: 4px;
+    border: 1px solid #e1e1e1;
+    padding: 10px 15px;
+    transition: var(--transition);
+    background-color: #f8f9fa !important;
+}
+
+/* Override all success/info/primary colors */
+.bg-success,
+.bg-info,
+.bg-primary,
+.btn-success,
+.btn-info,
+.btn-primary,
+.alert-success,
+.alert-info,
+.alert-primary {
+    background-color: var(--brand-orange) !important;
+    border-color: var(--brand-orange) !important;
+    color: #fff !important;
+}
+
+/* Navigation and Header Elements */
+.navbar-bg,
+.navbar,
+.nav-link.active,
+.section-header {
+    background-color: var(--brand-dark-blue) !important;
+    color: #fff !important;
+}
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: var(--primary-color);
+    color: #fff;
+}
+/* Card Enhancements */
+.card {
+    border: none;
+    background: var(--card-blue);
+    color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.table thead th {
+    background-color: var(--brand-dark-blue) !important;
+    color: #fff !important;
+    font-weight: 600;
+    border: none;
+    padding: 1rem;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+
+.home-header nav,
+.home-header .navbar {
+    background: var(--brand-dark-blue) !important;
+    padding: 0.5rem 1rem;
+}
+
+.home-header-text h5,
+
+.home-header-text h5 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.nav-item {
+    margin: 0 5px;
+    position: relative;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.9) !important;
+    font-weight: 500;
+    padding: 0.8rem 1.2rem !important;
+    border-radius: 4px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--brand-orange);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-item.active .nav-link::after {
+    width: 80%;
+}
+
+.nav-item:not(.active) .nav-link:hover {
+    color: #fff !important;
+    background: rgba(255,255,255,0.1);
+}
+
+.nav-item.active .nav-link {
+    background: var(--brand-orange) !important;
+    color: #fff !important;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Banner Area */
+.home-banner {
+    position: relative;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--brand-dark-blue) 0%, var(--brand-blue-light) 100%) !important;
+}
+
+.home-banner .carousel-item h5 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.home-banner .carousel-item p {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.home-banner .btn-orange {
+    padding: 12px 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+}
+
+.home-banner-bg-color {
+    background: none !important;
+}
+
+.carousel-item {
+    padding: 2rem 0;
+}
+
+.carousel-item h5 {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.carousel-item p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Login Card */
+.card-login {
+    border: none !important;
+    border-radius: 8px !important;
+    box-shadow: var(--shadow-lg) !important;
+    background: #fff !important;
+    overflow: hidden;
+    margin-top: -20px; /* Pull up slightly to overlap banner gradient */
+    transition: var(--transition);
+}
+
+.card-login:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg), 0 10px 25px rgba(0,51,102,0.2) !important;
+}
+
+.card-login .form-control {
+    border-radius: 4px;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #e1e1e1;
+    background: #f8f9fa !important;
+    transition: var(--transition);
+}
+
+.card-login .form-control:focus {
+    border-color: var(--brand-orange);
+    box-shadow: 0 0 0 0.2rem rgba(255,102,0,0.15);
+}
+
+.card-login .form-control {
+    border-radius: 4px;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #e1e1e1;
+    background: #f8f9fa !important;
+    transition: var(--transition);
+}
+
+.card-login .form-control:focus {
+    border-color: var(--brand-orange);
+    box-shadow: 0 0 0 0.2rem rgba(255,102,0,0.25);
+}
+
+.btn-login,
+.card-login .btn {
+    background: var(--brand-orange) !important;
+    color: #fff !important;
+    padding: 12px 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none !important;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-login:hover,
+.card-login .btn:hover {
+    background: var(--brand-orange-light) !important;
+}
+
+/* Alur Pendaftaran */
+.alur-header,
+.card-header {
+    background: var(--brand-dark-blue) !important;
+    color: #fff !important;
+    padding: 1rem 1.5rem;
+    border-radius: 8px 8px 0 0 !important;
+    font-weight: 600;
+}
+
+.icon-circle,
+.step .icon,
+.icon-step {
+    background: var(--brand-orange) !important;
+    color: #fff !important;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.icon-circle:hover,
+.step .icon:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-md);
+}
+
+/* Statistics Section */
+.statistik {
+    background: var(--info-bg) !important;
+    padding: 4rem 0;
+    position: relative;
+}
+
+.statistik::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--brand-dark-blue), var(--brand-orange));
+}
+
+.statistik .card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.statistik .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.statistik .card-header {
+    background: var(--brand-dark-blue);
+    color: #fff;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-bottom: none;
+}
+
+.statistik .card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.statistik h5 {
+    color: var(--brand-dark-blue);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.statistik h6 {
+    color: var(--brand-orange);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: #fff !important;
+    border-radius: 8px !important;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: none !important;
+    text-align: center;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-number {
+    color: var(--brand-orange) !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    margin: 1rem 0;
+    line-height: 1;
+}
+
+.stat-title {
+    color: var(--stat-title) !important;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+/* Info Cards */
+.info-tabs .nav-tabs {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.info-tabs .nav-link {
+    color: var(--brand-dark-blue) !important;
+    border: 1px solid #e1e1e1;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+}
+
+.info-tabs .nav-link.active {
+    background: var(--brand-orange) !important;
+    color: #fff !important;
+    border-color: var(--brand-orange) !important;
+}
+
+/* Footer */
+.home-footer {
+    background: var(--brand-dark-blue) !important;
+    color: #fff !important;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Table Styles */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2rem;
+}
+
+.table thead th {
+    background: var(--brand-dark-blue) !important;
+    color: #fff !important;
+    font-weight: 600;
+    border: none;
+    padding: 1rem;
+    white-space: nowrap;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 1rem;
+    border-color: rgba(0,0,0,0.05);
+}
+
+.table tbody tr {
+    transition: var(--transition);
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0,51,102,0.02) !important;
+    cursor: pointer;
+}
+
+.table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background: rgba(0,51,102,0.02);
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .home-header-text h5 {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-item h5 {
+        font-size: 1.8rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem !important;
+    }
+    
+    .card-login {
+        margin: 1rem;
+    }
+}
+
+/* Animation Classes */
+.animate-up {
+    animation: floatUp 0.5s ease-out;
+}
+
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional Theme Overrides */
+.main-sidebar,
+.navbar-bg {
+    background-color: var(--brand-dark-blue) !important;
+}
+
+.btn-lg {
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Badge Overrides */
+.badge-success,
+.badge-primary,
+.badge-info {
+    background-color: var(--brand-orange) !important;
+}
+
+/* Link Colors */
+a {
+    color: var(--brand-orange);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--brand-orange-light);
+    text-decoration: none;
+}
+
+/* Progress Bars */
+.progress-bar {
+    background-color: var(--brand-orange);
+}
+
+/* Custom Select Styling */
+.custom-select:focus {
+    border-color: var(--brand-orange);
+    box-shadow: 0 0 0 0.2rem rgba(255,102,0,0.25);
+}
+
+/* List Group Items */
+.list-group-item.active {
+    background-color: var(--brand-dark-blue);
+    border-color: var(--brand-dark-blue);
+}
+
+/* ---------- Theme overrides (user request) ---------- */
+/* Color tokens
+   - Dark blue (primary header/footer/strips): #003366
+   - Orange CTA (primary/secondary CTAs and accents): #FF6600
+   - Info section background: #F4F7F9
+   - Statistic number color: #FF6600 (large, bold)
+   - Statistic title color: #333333
+*/
+
+:root {
+	--brand-dark-blue: #003366;
+	--brand-orange: #FF6600;
+	--info-bg: #F4F7F9;
+	--stat-title: #333333;
+}
+
+/* Header: background -> dark blue; keep menu text white */
+.home-header,
+.home-header nav,
+.home-header .home-header-text,
+.home-header .navbar {
+	background: var(--brand-dark-blue) !important;
+	color: #ffffff !important;
+}
+
+.home-header .home-header-text h5,
+.home-header .home-header-text h6,
+.home-header nav .nav-link {
+	color: #ffffff !important;
+}
+
+/* Active nav item (ensure dark blue) */
+.home-header nav .nav-item.active {
+	background: var(--brand-dark-blue) !important;
+	box-shadow: 0 0 10px 3px rgba(0,0,0,0.08) !important;
+}
+
+/* Login button (primary CTA) -> orange */
+.card-login .btn,
+.btn-login,
+.btn.btn-login {
+	background: var(--brand-orange) !important;
+	color: #ffffff !important;
+	border: 0 !important;
+}
+
+/* General CTA buttons inside banner / header -> orange */
+.home-banner .carousel-item .btn,
+.btn-cta,
+.btn-primary {
+	background: var(--brand-orange) !important;
+	color: #fff !important;
+	border: none !important;
+}
+
+/* Main content area background stays white */
+.home-content,
+.main-content,
+.content {
+	background: #ffffff !important;
+}
+
+/* Title "Cek Status Pendaftaran" color -> dark blue */
+.cek-status-title,
+.title-cek-status,
+.check-status-title,
+.home-content h2.cek-status,
+.home-content .cek-status-title {
+	color: var(--brand-dark-blue) !important;
+}
+
+/* Secondary CTA (check status) -> orange */
+.btn-check-status,
+.btn-cek-status {
+	background: var(--brand-orange) !important;
+	color: #fff !important;
+	border: none !important;
+}
+
+/* ALUR PENDAFTARAN strip: give dark blue background */
+.alur-header,
+.alur .header,
+.flow-header,
+.home-content section.alur .card-header,
+.home-content section .alur-card .card-header,
+.home-content section .card-header.alur {
+	background: var(--brand-dark-blue) !important;
+	color: #ffffff !important;
+}
+
+/* Icons for steps: make the circular background orange */
+.alur .icon-circle,
+.step .icon-circle,
+.flow-step .icon,
+.icon-step,
+.timeline .icon {
+	background: var(--brand-orange) !important;
+	color: #ffffff !important;
+	border-color: var(--brand-orange) !important;
+}
+
+/* Flow step text: bold and dark blue */
+.alur .step-title,
+.flow-step .title,
+.step .title,
+.alur .title {
+	font-weight: 700 !important;
+	color: var(--brand-dark-blue) !important;
+}
+
+/* Info & Statistics area background */
+.info-section,
+.stats-section,
+.home-info,
+.info-wrapper {
+	background: var(--info-bg) !important;
+}
+
+/* Info/Pengumuman box titles: dark blue text on white box (remove old colored strip) */
+.info-box,
+.pengumuman-box,
+.announcement-box {
+	background: #ffffff !important;
+	border: 0 !important;
+}
+
+.info-box .box-title,
+.pengumuman-box .box-title,
+.announcement-box .box-title,
+.card .box-title,
+.card .card-title {
+	color: var(--brand-dark-blue) !important;
+	background: transparent !important;
+	font-weight: 700 !important;
+}
+
+/* Tabs styling for Info Pendaftaran */
+.info-tabs .nav-tabs .nav-item.show .nav-link,
+.info-tabs .nav-tabs .nav-link.active {
+	background: var(--brand-dark-blue) !important;
+	color: #ffffff !important;
+	border: 1px solid var(--brand-dark-blue) !important;
+}
+
+.info-tabs .nav-tabs .nav-link {
+	background: #ffffff !important;
+	color: var(--brand-dark-blue) !important;
+	border: 1px solid rgba(0,0,0,0.08) !important;
+}
+
+/* Statistic cards: white background + subtle shadow */
+.stat-card,
+.card.statistic,
+.statistic-card {
+	background: #ffffff !important;
+	box-shadow: 0 6px 18px rgba(50,50,93,0.06) !important;
+	border: 0 !important;
+}
+
+/* Statistic number: big, bold, orange */
+.stat-card .stat-number,
+.statistic .number,
+.stat-number {
+	color: var(--brand-orange) !important;
+	font-size: 28px !important;
+	font-weight: 800 !important;
+}
+
+/* Statistic title: dark gray */
+.stat-card .stat-title,
+.statistic .title,
+.stat-title {
+	color: var(--stat-title) !important;
+	font-weight: 500 !important;
+}
+
+/* Table header strip -> dark blue; header text white */
+.table thead th,
+.data-table thead th,
+.table-title-row,
+.table-header-row {
+	background: var(--brand-dark-blue) !important;
+	color: #ffffff !important;
+}
+
+.table tbody td,
+.data-table tbody td {
+	background: #ffffff !important;
+	color: #333333 !important;
+}
+
+/* Bottom footer bar -> dark blue */
+.site-footer,
+.bottom-footer,
+.footer-bar {
+	background: var(--brand-dark-blue) !important;
+	color: #ffffff !important;
+}
+
+/* Small helpers for devs: ensure links in dark blue areas stay white */
+.home-header a,
+.site-footer a,
+.bottom-footer a {
+	color: #ffffff !important;
+}
+
+/* Fallback: if there are inline gradients using old teal values, make the button/text colors still use our tokens */
+button, .btn { color: inherit; }
+
+/* End theme overrides */
+
+/* Form styling for registration cards */
+.card-body label,
+.form-group label {
+	color: #333333 !important;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+
+.card-body .form-control {
+	color: #333333 !important;
+	background-color: #ffffff !important;
+	border: 1px solid #ddd;
+}
+
+.card-body .form-control::placeholder {
+	color: #999999 !important;
+}
+
+.card-body .form-control:focus {
+	color: #333333 !important;
+	background-color: #ffffff !important;
+	border-color: var(--brand-orange) !important;
+}
+
+.card-body select.form-control {
+	color: #333333 !important;
+	background-color: #ffffff !important;
+}
+
+/* Ensure form group text in card body is visible */
+.card-body .form-row {
+	color: #333333 !important;
+}
+
+.card-body .form-group {
+	color: #333333 !important;
+}
+
+/* Make sure input fields inside cards have dark text */
+.card-body input[type="text"],
+.card-body input[type="number"],
+.card-body input[type="password"],
+.card-body input[type="date"],
+.card-body input[type="email"],
+.card-body select,
+.card-body textarea {
+	color: #333333 !important;
+}
+
+/* Link styling inside forms */
+.card-body a {
+	color: var(--brand-orange) !important;
+}
+
+.card-body a:hover {
+	color: var(--brand-orange-light) !important;
+}
+
+/* Text styling for activities and info sections */
+.activities .activity-detail h4,
+.activities .activity-detail p,
+.card-body h4,
+.card-body h5,
+.card-body h6,
+.card-body p,
+.activity-detail h5 {
+	color: #333333 !important;
+}
+
+/* Pengumuman and announcement styling */
+.card-body .text-job {
+	color: var(--brand-orange) !important;
+}
+
+.card-body .text-job:hover {
+	color: var(--brand-orange-light) !important;
+}
+
+/* Timeline/Activity text styling */
+.activity-detail {
+	background-color: #ffffff !important;
+	color: #333333 !important;
+}
+
+.activity-detail p,
+.activity-detail h5 {
+	color: #333333 !important;
+}
+
+/* Info section text */
+.card-body .info-text,
+.card-body .pengumuman-text {
+	color: #333333 !important;
+}
+
+/* Date and metadata styling in announcements */
+.card-body .text-muted,
+.card-body .text-secondary {
+	color: #666666 !important;
+}
+
+/* Ensure all card content is readable */
+.statistik .card-body {
+	color: #333333 !important;
+}
+
+.statistik .card-body p,
+.statistik .card-body h5,
+.statistik .card-body h6 {
+	color: #333333 !important;
+}
+
+/* Statistics numbers and titles styling */
+.statistik .card-body h2 {
+	color: var(--brand-orange) !important;
+	font-weight: 700 !important;
+}
+
+.statistik .card .card-header {
+	background-color: var(--brand-dark-blue) !important;
+	color: #ffffff !important;
+}
+
+/* Table styling in statistik section */
+.statistik .table {
+	color: #333333 !important;
+}
+
+.statistik .table thead th {
+	background-color: var(--brand-dark-blue) !important;
+	color: #ffffff !important;
+	font-weight: 600;
+}
+
+.statistik .table tbody td {
+	color: #333333 !important;
+	background-color: #ffffff !important;
+}
+
+.statistik .table tbody tr:hover {
+	background-color: #f5f5f5 !important;
+}
+
+/* Badge styling in tables */
+.statistik .badge {
+	background-color: var(--brand-orange) !important;
+	color: #ffffff !important;
+}
+
+/* Data Pendaftar and Quota cards */
+.statistik .card-header {
+	font-weight: 600;
+}
+
+.statistik .card-body h2 {
+	font-size: 2rem;
+	margin: 1rem 0;
+}

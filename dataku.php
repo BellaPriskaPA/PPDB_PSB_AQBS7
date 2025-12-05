@@ -1,0 +1,1 @@
+<img alt="image" src="../<?= !empty($siswa['foto']) ? $siswa['foto'] : 'assets/img/avatar/avatar-1.png' ?>" class="rounded-circle author-box-picture" style="width: 80px; height: 120px; object-fit: cover;">

@@ -1,0 +1,522 @@
+.twPc-div {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    height: 200px;
+    max-width: 340px; /* original twitter width: 290px */;
+}
+.twPc-bg {
+    background-color: #003366; /* match header deep blue */
+    background-image: none;
+    background-position: center;
+    background-size: cover;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px 4px 0 0;
+    height: 95px;
+    width: 100%;
+    color: #ffffff;
+}
+.twPc-block {
+    display: block !important;
+}
+.twPc-button {
+    margin: -35px -10px 0;
+    text-align: right;
+    width: 100%;
+}
+.twPc-avatarLink {
+    background-color: #fff;
+    border-radius: 6px;
+    display: inline-block !important;
+    float: left;
+    margin: -30px 5px 0 8px;
+    max-width: 100%;
+    padding: 1px;
+    vertical-align: bottom;
+}
+.twPc-avatarImg {
+    border: 2px solid #fff;
+    border-radius: 7px;
+    box-sizing: border-box;
+    color: #fff;
+    height: 72px;
+    width: 72px;
+}
+.twPc-divUser {
+    margin: 5px 0 0;
+}
+/* Add spacing below avatar/user block so following boxes don't appear too close */
+.twPc-avatarLink {
+    display: block;
+    margin-bottom: 36px; /* increased space to prevent overlap with following box */
+}
+.twPc-divUser {
+    margin-bottom: 36px; /* extra space before next box */
+}
+.twPc-avatarImg {
+    position: relative; /* keep image above following elements */
+    z-index: 999; /* ensure avatar sits above surrounding boxes */
+    display: inline-block;
+}
+
+/* If a .box follows the user block, push it down so it doesn't overlap the avatar */
+.twPc-divUser + .box,
+.twPc-avatarLink + .box,
+.twPc-divUser + .box.box-solid {
+    margin-top: 48px;
+}
+
+@media (max-width: 576px) {
+    .twPc-divUser + .box,
+    .twPc-avatarLink + .box,
+    .twPc-divUser + .box.box-solid {
+        margin-top: 64px;
+    }
+}
+.twPc-divName {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+}
+.twPc-divName a {
+    color: inherit !important;
+}
+.twPc-divStats {
+    margin-left: 11px;
+    padding: 10px 0;
+}
+.twPc-Arrange {
+    box-sizing: border-box;
+    display: table;
+    margin: 0;
+    min-width: 100%;
+    padding: 0;
+    table-layout: auto;
+}
+ul.twPc-Arrange {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.twPc-ArrangeSizeFit {
+    display: table-cell;
+    padding: 0;
+    vertical-align: top;
+}
+.twPc-ArrangeSizeFit a:hover {
+    text-decoration: none;
+}
+.twPc-StatValue {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.15s ease-in-out 0s;
+}
+.twPc-StatLabel {
+    color: #8899a6;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: color 0.15s ease-in-out 0s;
+}
+
+/* Navbar color: use the deep blue #003366 to match .navbar-bg */
+.main-navbar {
+    background: #003366 !important;
+    border-bottom: 3px solid #003366 !important;
+}
+
+    /* ---------- Colorful sidebar accents ---------- */
+    /* Add a vertical colored pill at the right side of each sidebar menu item */
+    .main-sidebar .sidebar-menu li a {
+        position: relative;
+        padding-right: 48px; /* make room for the accent */
+    }
+    .main-sidebar .sidebar-menu li a::after {
+        content: '';
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 36px;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+        background: #003366; /* default */
+    }
+
+    /* Assign different colors to each visible menu item (adjust nth-child as needed) */
+    .main-sidebar .sidebar-menu > li:nth-child(1) > a::after { background: #1abc9c; } /* teal */
+    .main-sidebar .sidebar-menu > li:nth-child(2) > a::after { background: #3498db; } /* blue */
+    .main-sidebar .sidebar-menu > li:nth-child(3) > a::after { background: #f39c12; } /* orange */
+    .main-sidebar .sidebar-menu > li:nth-child(4) > a::after { background: #e74c3c; } /* red */
+    .main-sidebar .sidebar-menu > li:nth-child(5) > a::after { background: #9b59b6; } /* purple */
+    .main-sidebar .sidebar-menu > li:nth-child(6) > a::after { background: #2ecc71; } /* green */
+    .main-sidebar .sidebar-menu > li:nth-child(7) > a::after { background: #16a085; } /* dark teal */
+
+    /* Active/hover state: enlarge the accent and brighten */
+    .main-sidebar .sidebar-menu li a:hover::after,
+    .main-sidebar .sidebar-menu li.active > a::after {
+        width: 14px;
+        height: 40px;
+        right: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+    }
+
+    @media (max-width: 768px) {
+        .main-sidebar .sidebar-menu li a::after { display: none; }
+    }
+.main-navbar .nav-link,
+.main-navbar .navbar-brand,
+.main-navbar .navbar-text {
+    color: #ffffff !important;
+}
+.main-navbar .nav-link:hover,
+.main-navbar .nav-link:focus {
+    color: #ffcc99 !important; /* soft orange on hover */
+}
+.main-navbar .nav-link .fas,
+.main-navbar .nav-link .fa {
+    color: #ffffff !important;
+}
+.main-navbar .nav-link.nav-link-lg:hover i {
+    color: #ff7b00 !important;
+}
+/* Toggler / small-screen button */
+.main-navbar .nav-link.nav-link-lg i {
+    color: #ffffff;
+    font-size: 18px;
+}
+.main-navbar .form-inline .nav-link {
+    color: rgba(255,255,255,0.95) !important;
+}
+/* Make active state more visible */
+.main-navbar .nav-item.active > .nav-link {
+    background: rgba(255,255,255,0.06);
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .main-navbar { border-bottom-width: 2px; }
+}
+
+/* ------------------ Sidebar Menu Redesign (cards) ------------------ */
+/* Modern, educational, colorful card-like menu for: Kelembagaan, Data PSB, Data Master, Cetak, Akun */
+/* Modern grouped sidebar: clean, elegant, with colored icons and dividers */
+    .main-sidebar .sidebar-menu {
+        padding: 18px 12px 24px 12px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 6px 22px rgba(31,45,61,0.06);
+    }
+    .main-sidebar .sidebar-menu > li {
+        margin-bottom: 0;
+    }
+
+    /* Main menu divider: soft, thin line after each main group */
+    .main-sidebar .sidebar-menu > li.dropdown {
+        border-bottom: 1.5px solid #e8ecee;
+        margin-bottom: 10px;
+        padding-bottom: 2px;
+    }
+    .main-sidebar .sidebar-menu > li.dropdown:last-child {
+        border-bottom: none;
+    }
+
+    /* Main menu link: flex, colored icon, bold label */
+    .main-sidebar .sidebar-menu > li > a.nav-link.has-dropdown {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-weight: 700;
+        font-size: 15px;
+        color: #1a2533 !important;
+        padding: 12px 10px 12px 0;
+        border-radius: 8px;
+        background: #f8f9fa;
+        transition: background .14s, box-shadow .14s;
+    }
+    .main-sidebar .sidebar-menu > li > a.nav-link.has-dropdown:hover,
+    .main-sidebar .sidebar-menu > li > a.nav-link.has-dropdown:focus {
+        background: #eef2f6;
+        box-shadow: 0 2px 8px rgba(52,152,219,0.08);
+    }
+
+    /* Main menu icons: strong color, not too bold, rounded */
+    .main-sidebar .sidebar-menu > li > a.nav-link.has-dropdown i {
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-size: 18px;
+        background: #eaf3fb;
+        color: #3498db;
+        flex: 0 0 38px;
+        transition: background .14s, color .14s;
+    }
+/* Specific: color fa-database icon green for Data PSB */
+.main-sidebar .sidebar-menu > li > a.nav-link.has-dropdown i.fa-database {
+    background: #eafaf3;
+    color: #2ecc71 !important;
+}    /* Specific: color other main menu icons */
+    .main-sidebar .sidebar-menu > li > a.nav-link.has-dropdown i.fa-home {
+        background: #eaf3fb;
+        color: #3498db !important;
+    }
+    .main-sidebar .sidebar-menu > li > a.nav-link.has-dropdown i.fa-fire {
+        background: #f5eafc;
+        color: #9b59b6 !important;
+    }
+    .main-sidebar .sidebar-menu > li > a.nav-link.has-dropdown i.fa-book {
+        background: #eafcff;
+        color: #00bcd4 !important;
+    }
+    .main-sidebar .sidebar-menu > li > a.nav-link.has-dropdown i.fa-user {
+        background: #fff3f7;
+        color: #e67e22 !important;
+    }
+    /* Color mapping for each main menu icon */
+    .main-sidebar .sidebar-menu > li:nth-child(2) > a.nav-link.has-dropdown i { background: #eaf3fb; color: #3498db; } /* Kelembagaan: blue */
+    .main-sidebar .sidebar-menu > li:nth-child(3) > a.nav-link.has-dropdown i { background: #eafaf3; color: #2ecc71; } /* Data PSB: green */
+    .main-sidebar .sidebar-menu > li:nth-child(4) > a.nav-link.has-dropdown i { background: #f5eafc; color: #9b59b6; } /* Data Master: purple */
+    .main-sidebar .sidebar-menu > li:nth-child(5) > a.nav-link.has-dropdown i { background: #eafcff; color: #00bcd4; } /* Cetak: cyan */
+    .main-sidebar .sidebar-menu > li:nth-child(6) > a.nav-link.has-dropdown i { background: #fff3f7; color: #e67e22; } /* Akun: orange */
+
+    /* Sub-menu: soft color, clean spacing, modern look */
+    .main-sidebar .sidebar-menu ul.dropdown-menu {
+        background: none;
+        box-shadow: none;
+        margin: 0 0 0 38px;
+        padding: 0;
+        border: none;
+    }
+    .main-sidebar .sidebar-menu ul.dropdown-menu li {
+        margin-bottom: 2px;
+    }
+    .main-sidebar .sidebar-menu ul.dropdown-menu li a.nav-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #2c3e50 !important;
+        background: none;
+        border-radius: 6px;
+        padding: 8px 8px 8px 0;
+        transition: background .14s, color .14s;
+    }
+    .main-sidebar .sidebar-menu ul.dropdown-menu li a.nav-link:hover,
+    .main-sidebar .sidebar-menu ul.dropdown-menu li a.nav-link:focus {
+        background: #f8f9fa;
+        color: #3498db !important;
+    }
+
+    /* Sub-menu icon bullets: soft tint, color per group */
+    .main-sidebar .sidebar-menu ul.dropdown-menu li a.nav-link::before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 8px;
+        background: #dbeafe;
+        vertical-align: middle;
+    }
+    /* Sub-menu color mapping (by parent group) */
+    .main-sidebar .sidebar-menu > li:nth-child(2) ul.dropdown-menu li a.nav-link::before { background: #3498db33; } /* Kelembagaan */
+    .main-sidebar .sidebar-menu > li:nth-child(3) ul.dropdown-menu li a.nav-link::before { background: #2ecc7133; } /* Data PSB */
+    .main-sidebar .sidebar-menu > li:nth-child(4) ul.dropdown-menu li a.nav-link::before { background: #9b59b633; } /* Data Master */
+    .main-sidebar .sidebar-menu > li:nth-child(5) ul.dropdown-menu li a.nav-link::before { background: #00bcd433; } /* Cetak */
+    .main-sidebar .sidebar-menu > li:nth-child(6) ul.dropdown-menu li a.nav-link::before { background: #e67e2233; } /* Akun */
+
+    /* Sub-menu special colors (success, warning, danger) for Data PSB */
+    .main-sidebar .sidebar-menu > li:nth-child(3) ul.dropdown-menu li a.text-success { color: #27ae60 !important; font-weight: 600; }
+    .main-sidebar .sidebar-menu > li:nth-child(3) ul.dropdown-menu li a.text-warning { color: #e67e22 !important; font-weight: 600; }
+    .main-sidebar .sidebar-menu > li:nth-child(3) ul.dropdown-menu li a.text-danger { color: #e74c3c !important; font-weight: 600; }
+    .main-sidebar .sidebar-menu > li:nth-child(3) ul.dropdown-menu li a.text-success::before { background: #27ae6033; }
+    .main-sidebar .sidebar-menu > li:nth-child(3) ul.dropdown-menu li a.text-warning::before { background: #e67e2233; }
+    .main-sidebar .sidebar-menu > li:nth-child(3) ul.dropdown-menu li a.text-danger::before { background: #e74c3c33; }
+
+    /* Responsive: collapse padding, reduce icon size */
+    @media (max-width: 768px) {
+        .main-sidebar .sidebar-menu { padding: 8px 2px 12px 2px; border-radius: 6px; }
+        .main-sidebar .sidebar-menu > li > a.nav-link.has-dropdown { font-size: 14px; padding: 10px 6px 10px 0; }
+        .main-sidebar .sidebar-menu > li > a.nav-link.has-dropdown i { width: 30px; height: 30px; font-size: 15px; }
+        .main-sidebar .sidebar-menu ul.dropdown-menu { margin-left: 30px; }
+        .main-sidebar .sidebar-menu ul.dropdown-menu li a.nav-link { font-size: 13px; padding: 7px 6px 7px 0; }
+    }
+
+/* Remove previous small accent pill to avoid duplicate visuals */
+.main-sidebar .sidebar-menu li a::after { display: none !important; }
+
+.main-sidebar .sidebar-menu > li > a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background: #ffffff;
+    color: #2c3e50 !important; /* dark text for readability */
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    transition: transform .14s ease, box-shadow .14s ease, background .14s ease;
+    font-family: 'Poppins', 'Inter', 'Lato', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 600;
+}
+
+.main-sidebar .sidebar-menu > li > a .menu-icon,
+.main-sidebar .sidebar-menu > li > a i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    color: #ffffff !important;
+    font-size: 18px;
+    flex: 0 0 44px;
+}
+
+.main-sidebar .sidebar-menu > li > a .menu-label {
+    flex: 1 1 auto;
+    color: #2c3e50 !important;
+    font-size: 15px;
+}
+
+/* Color mapping for the first five items (order: Kelembagaan, Data PSB, Data Master, Cetak, Akun) */
+.main-sidebar .sidebar-menu > li:nth-child(1) > a .menu-icon {
+    background: rgba(52,152,219,0.12);
+    border: 1px solid rgba(52,152,219,0.22);
+    color: #3498db !important; /* icon glyph colored */
+}
+.main-sidebar .sidebar-menu > li:nth-child(2) > a .menu-icon {
+    background: rgba(46,204,113,0.12);
+    border: 1px solid rgba(46,204,113,0.22);
+    color: #2ecc71 !important;
+}
+.main-sidebar .sidebar-menu > li:nth-child(3) > a .menu-icon {
+    background: rgba(230,126,34,0.12);
+    border: 1px solid rgba(230,126,34,0.22);
+    color: #e67e22 !important;
+}
+.main-sidebar .sidebar-menu > li:nth-child(4) > a .menu-icon {
+    background: rgba(155,89,182,0.12);
+    border: 1px solid rgba(155,89,182,0.22);
+    color: #9b59b6 !important;
+}
+.main-sidebar .sidebar-menu > li:nth-child(5) > a .menu-icon {
+    background: rgba(232,67,147,0.12);
+    border: 1px solid rgba(232,67,147,0.22);
+    color: #e84393 !important;
+}
+
+/* If there are extra items, keep a subtle deep-blue default */
+.main-sidebar .sidebar-menu > li:nth-child(n+6) > a .menu-icon { background: #003366; }
+
+/* Hover and active feedback */
+.main-sidebar .sidebar-menu > li > a:hover,
+.main-sidebar .sidebar-menu > li.active > a {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+    background: #ffffff;
+}
+
+.main-sidebar .sidebar-menu > li > a:focus {
+    outline: 3px solid rgba(52,152,219,0.12);
+    outline-offset: 2px;
+}
+
+/* Small screens: simplify */
+@media (max-width: 768px) {
+    .main-sidebar .sidebar-menu > li > a {
+        padding: 10px 10px;
+        border-radius: 6px;
+    }
+    .main-sidebar .sidebar-menu > li > a .menu-icon {
+        width: 36px; height: 36px; font-size: 16px;
+    }
+}
+
+/* Make sure link icons (fontawesome, etc.) keep correct spacing */
+.main-sidebar .sidebar-menu > li > a i.fas, .main-sidebar .sidebar-menu > li > a i.fab {
+    line-height: 1; vertical-align: middle;
+}
+
+/* Ensure contrast: text inside sidebar headers remains dark */
+.main-sidebar .sidebar-menu li.header,
+.main-sidebar .sidebar-menu li.header a {
+    color: #2c3e50 !important;
+}
+
+/* Accessibility: show keyboard focus clearly on the anchors */
+.main-sidebar .sidebar-menu > li > a:focus-visible {
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.12);
+}
+
+/* Force the template bar element <div class="navbar-bg"></div> to the requested deep blue */
+.navbar-bg {
+    background: #003366 !important;
+    box-shadow: none !important;
+}
+.navbar-bg, .navbar-bg * {
+    color: #ffffff !important;
+}
+
+/* Override remaining orange accents under the navbar/header */
+.navbar-bg::after,
+.navbar-bg::before,
+.main-navbar::after,
+.navbar::after,
+.nav-link::after,
+.home-header::after,
+.statistik::before {
+    background: #003366 !important;
+    background-color: #003366 !important;
+    border-color: #003366 !important;
+}
+
+/* Prevent nav active/hover states from using orange accents */
+.nav-item.active .nav-link,
+.nav-link:hover,
+.nav-link:focus {
+    background: rgba(0,51,102,0.08) !important;
+    color: #ffffff !important;
+}
+.nav-item.active .nav-link::after,
+.nav-link:hover::after,
+.nav-link:focus::after {
+    background: #003366 !important;
+}
+
+
+/* Custom icon colors for sidebar menu */
+.fa-indent { color: #1abc9c !important; }
+.fa-upload { color: #3498db !important; }
+.fa-print { color: #e67e22 !important; }
+.fa-funnel-dollar { color: #9b59b6 !important; }
+.fa-bullhorn { color: #e74c3c !important; }
+
+/* Custom icon colors for sidebar menu (user section) */
+.sidebar-menu .fa-indent { color: #1abc9c !important; }
+.sidebar-menu .fa-upload { color: #3498db !important; }
+.sidebar-menu .fa-print { color: #e67e22 !important; }
+.sidebar-menu .fa-funnel-dollar { color: #9b59b6 !important; }
+.sidebar-menu .fa-bullhorn { color: #e74c3c !important; }
+
+/* Force custom icon colors and spacing for sidebar menu */
+.sidebar-menu .nav-link > i.fa-indent { color: #1abc9c !important; margin-right: 0px !important; }
+.sidebar-menu .nav-link > i.fa-upload { color: #3498db !important; margin-right: 0px !important; }
+.sidebar-menu .nav-link > i.fa-print { color: #e67e22 !important; margin-right: 0px !important; }
+.sidebar-menu .nav-link > i.fa-funnel-dollar { color: #9b59b6 !important; margin-right: 0px !important; }
+.sidebar-menu .nav-link > i.fa-bullhorn { color: #e74c3c !important; margin-right: 0px !important; }
+.sidebar-menu .nav-link > span { margin-left: 0 !important; }
+
+/* Reduce gap between icon and label in sidebar menu */
+.sidebar-menu .nav-link > i {
+    margin-right: 0px !important;
+}
+.sidebar-menu .nav-link > span {
+    margin-left: -12px !important;
+}
